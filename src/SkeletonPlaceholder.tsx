@@ -94,7 +94,7 @@ export default function SkeletonPlaceholder({
         element,
         (child: JSX.Element, index: number) => {
           let style: ViewStyle;
-          if (child.type.displayName === "SkeletonPlaceholderItem") {
+          if (child.type === SkeletonPlaceholder.Item) {
             const { children, ...styles } = child.props;
             style = styles;
           } else {
